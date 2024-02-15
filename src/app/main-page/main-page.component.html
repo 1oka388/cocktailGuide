@@ -1,0 +1,59 @@
+<div class="row mt-5" >
+  <div class="col-md-2 diplay-inBlock">
+    <div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Search for a cocktail</mat-label>
+          <input matInput type="text" name="search" (keyup.enter)="search()"
+                 placeholder="Type here.." value="" [(ngModel)]="searchKeyword">
+        </mat-form-field>
+        <button (click)="search()" mat-flat-button color="primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row col-md-10 textCenter">
+    <div class="row col-md-10">
+      <div class="col-md-3 pad35"
+           *ngFor="let cocktail of filteredCocktails"
+           (click)="navigateToProductPage(cocktail.idDrink)">
+            <a [routerLink]="['/cocktail', cocktail.idDrink]">
+              <div class="card-cocktail">
+                <div>
+                  <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" class="img-main" width="200" height="200">
+                </div>
+                <div class="cocktail-title">{{ cocktail.strDrink }}</div>
+                <div class="cocktail-subtitle">{{ cocktail.strAlcoholic }}</div>
+              </div>
+            </a>
+      </div>
+    <mat-paginator [length]="totalLength"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   aria-label="Select page"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+    </div>
+
+    <div class="col-md-2">
+      <div>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Filter by Category
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-selection-list (selectionChange)="filterCategories($event)">
+              <mat-list-option *ngFor="let category of filters" [value]="category">
+                {{ category?.strCategory }}
+              </mat-list-option>
+            </mat-selection-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>
+
+

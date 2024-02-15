@@ -1,0 +1,59 @@
+.example-form{
+  margin-left:30px;
+  text-align:center;
+}
+.mat-mdc-paginator-container {
+  justify-content: center!important;
+  margin-top:50px;
+}
+.mat-accordion{
+
+}
+.mat-mdc-form-field{
+  width:100%!important;
+  max-width:250px!important;
+}
+button{
+  height:56px;
+  padding: 0 25px;
+}
+.card-cocktail{
+  height: 300px;
+  max-width: 240px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.cocktail-title{
+  color: black;
+  text-decoration:none;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight:500;
+}
+a{
+  text-decoration:none;
+}
+
+.cocktail-subtitle{
+  color: black;
+  text-decoration:none;
+  font-size: 16px;
+  font-weight: 100;
+}
+.mdc-list-item.mdc-list-item--with-one-line {
+  padding-left: 0!important;
+  text-align: left!important;
+}
+.img-main{
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+.diplay-inBlock{
+  display:inline-block;
+}
+.pad35{
+  padding: 0 35px;
+}

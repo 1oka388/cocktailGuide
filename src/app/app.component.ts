@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColorService } from './color.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'movies-app';
+
+    constructor(private colorService: ColorService) {}
+
+     toggleColor(): void {
+       this.colorService.toggleColor();
+     }
 }

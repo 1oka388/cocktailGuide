@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
+.header{
+  height:90px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 15px;
+  align-items:center
+}
+.img-wrapper{
+  padding: 5px;
+  margin-left: 40px;
+}
+.img-wrapper img{
+  width:120px;
+}
+.dark-theme {
+  background: #222025;
+}
+.dark-theme .small-card{
+  background:#5a5963;
+}
+
+.dark-theme .card-cocktail{
+  background:#5a5963;
+}
+.dark-theme .mdc-text-field{
+  background:#5a5963!important;
+}
+.dark-theme .mat-expansion-panel{
+  background:#5a5963!important;
+}
+.dark-theme h2{
+  color:#5a5963;
+}
+.dark-theme .mat-mdc-paginator{
+  background:#222025!important;
+}
+.dark-theme .mat-mdc-paginator-page-size-label{
+  color:#5a5963!important;
+}
+.dark-theme .mat-mdc-paginator-range-label{
+  color:#5a5963!important;
+}
+
+.mat-mdc-paginator-container {
+  justify-content: center!important;
+  margin-top:50px;
+}
+body{
+  overflow-x: hidden;
+}
+.small-card {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 5px;
+  margin-right:30px;
+}
+.fa-moon{
+  margin:0 10px;
+}
+.textCenter{
+  text-align:center;
+}

@@ -1,0 +1,42 @@
+<button (click)="navigateToHomePage()" mat-flat-button color="primary">Back to List</button>
+
+<div class="container">
+  <div class="row col-md-12 textCenter">
+    <div *ngIf="cocktailDetails" class="col-md-9 cocktailDetails">
+      <div class="pad47">
+        <img [src]="cocktailDetails.strDrinkThumb" alt="{{ cocktailDetails.strDrink }}" width="400">
+      </div>
+
+      <div class="details-dr">
+        <h2>{{ cocktailDetails.strDrink }}</h2>
+
+        <div class="small-card"><i class="fas fa-tag"></i>{{ cocktailDetails.strCategory }}</div>
+        <div class="small-card"><i class="fas fa-glass-whiskey"></i>{{ cocktailDetails.strGlass }}</div>
+        <div class="small-card"><i class="fas fa-shapes"></i>
+          <div class="d-block">
+            <div *ngFor="let ingredientIndex of ingredientSum">
+              <span *ngIf="cocktailDetails['strIngredient' + ingredientIndex]">
+                {{ cocktailDetails['strIngredient' + ingredientIndex] }}:
+                {{ cocktailDetails['strMeasure' + ingredientIndex] }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-card"><i class="fas fa-book"></i>
+          <div class="d-block">
+            <div *ngFor="let descriptionIndex of descriptionSum">
+              <span *ngIf="cocktailDetails['strInstructions' + descriptionIndex]">
+                <span *ngIf="descriptionIndex == '' ">EN</span>
+                <span *ngIf="descriptionIndex !== '' ">{{ descriptionIndex }}:</span>
+                {{ cocktailDetails['strInstructions' + descriptionIndex] }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
